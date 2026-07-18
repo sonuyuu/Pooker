@@ -8,34 +8,41 @@
 </head>
 <body>
 
-  <div class="container">
-    <div class="pod">
-      <div class="slot-info">занято мест: <span id="slotsCount">0</span> из 9</div>
-      <form id="regForm">
-        <input type="text" id="nickInput" class="nickname-input" placeholder="Введите ваш ник на сервере" required>
-        <br>
-        <button type="submit" class="btn-submit">Подать Заявку</button>
-      </form>
-    </div>
+  <!-- Твои оригинальные заголовки -->
+  <h1 class="naz">Pooker</h1>
+  <p class="pnaz">сайт sk</p>
 
-    <a href="#" class="btn-download">Скачать Ресурспак (.zip)</a>
+  <!-- Блок подачи заявки -->
+  <div class="pod">
+    <h2 class="za">Заявка на Ивент</h2>
+    <div class="zaa">занято мест: <span id="slotsCount">0</span> из 9</div>
+    <form id="regForm" style="height: 100%;">
+      <input type="text" id="nickInput" class="nil" placeholder="Введите ваш ник на сервере" required>
+      <button type="submit" class="tt">Подать Заявку</button>
+    </form>
+  </div>
 
-    <div class="pod">
-      <h2 class="za">Информация о Ивенте</h2>
-      <p><strong>Статус:</strong> <span id="eventStatus" class="status-open">Набор открыт</span></p>
-      <p><strong>Дата:</strong> 19 июля</p>
-      <p><strong>Время:</strong> 18:00 МСК</p>
-      <p><strong>Вид:</strong> Техасский Холдем</p>
-    </div>
+  <!-- Твоя кнопка скачать -->
+  <a href="#" class="kno">Скачать Ресурспак (.zip)</a>
 
-    <div class="pod" style="margin-top: 40px; margin-bottom: 20px; height: auto; min-height: fit-content; overflow: hidden; padding-bottom: 20px;">
-      <h2 class="za">Принятые Участники</h2>
-      <div id="approvedPlayersList" style="text-align: left; margin: 15px auto; max-width: 80%; font-family: sans-serif; font-size: 16px; color: #e0e0e0; line-height: 1.8;">
-        Загрузка списка...
-      </div>
+  <!-- Блок информации -->
+  <div class="pod" style="height: auto;">
+    <h2 class="za">Информация о Ивенте</h2>
+    <p class="ty"><strong>Статус:</strong> <span id="eventStatus" class="van">Набор открыт</span></p>
+    <p class="ty"><strong>Дата:</strong> 19 июля</p>
+    <p class="ty"><strong>Время:</strong> 18:00 МСК</p>
+    <p class="ty"><strong>Вид:</strong> Техасский Холдем</p>
+  </div>
+
+  <!-- Твой блок принятых участников -->
+  <div class="yyy">
+    <h2 class="za">Принятые Участники</h2>
+    <div id="approvedPlayersList" class="tyyy">
+      Загрузка списка...
     </div>
   </div>
 
+  <!-- Скрипты Firebase -->
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
   <script>
@@ -55,12 +62,8 @@
       const toast = document.createElement('div');
       toast.id = 'main-toast';
       toast.textContent = message;
-      Object.assign(toast.style, {
-        position: 'fixed', top: '20px', left: '50%', transform: 'translateX(-50%)',
-        backgroundColor: isError ? '#c62828' : '#2e7d32', color: 'white',
-        padding: '12px 24px', borderRadius: '8px', zIndex: '10000',
-        fontFamily: 'sans-serif', fontWeight: 'bold', transition: 'opacity 0.3s'
-      });
+      toast.style.backgroundColor = isError ? '#7A2B2D' : '#2C3E2B';
+      toast.style.color = isError ? '#ff8888' : '#00d100';
       document.body.appendChild(toast);
       setTimeout(() => toast.style.opacity = '0', 2500);
       setTimeout(() => toast.remove(), 2800);
@@ -74,18 +77,19 @@
       listDiv.innerHTML = '';
       if (!data) {
         countSpan.textContent = '0';
-        listDiv.innerHTML = 'Пока никто не принят.';
+        listDiv.innerHTML = '<span class="fri">Участников пока нет</span>';
         statusSpan.textContent = 'Набор открыт';
-        statusSpan.className = 'status-open';
+        statusSpan.style.color = '#00d100';
         return;
       }
       const total = Object.keys(data).length;
       countSpan.textContent = total;
       statusSpan.textContent = total >= 9 ? 'Набор закрыт' : 'Набор открыт';
-      statusSpan.className = total >= 9 ? 'status-closed' : 'status-open';
+      statusSpan.style.color = total >= 9 ? '#7A2B2D' : '#00d100';
+      
       let index = 1;
       for (let id in data) {
-        listDiv.innerHTML += `<b>${index}.</b> ${data[id].nickname}<br>`;
+        listDiv.innerHTML += `<div><b>${index}.</b> ${data[id].nickname}</div>`;
         index++;
       }
     });
@@ -108,4 +112,3 @@
   </script>
 </body>
 </html>
-
