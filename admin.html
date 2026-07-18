@@ -165,7 +165,7 @@
         // Авторизация (Почта под капотом, запрашиваем только пароль)
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const email = "admin@pooker.ru"; // Твой скрытый логин
+            const email = "admin@pooker.ru"; 
             const password = document.getElementById('loginPassword').value;
 
             auth.signInWithEmailAndPassword(email, password)
