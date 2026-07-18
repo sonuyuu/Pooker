@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="sonuyuu">
+    <link rel="stylesheet" href="style.css">
+    <title>sonuyuu kormit</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <h1 class="naz">Pooker</h1>
+    <p title="sonuyuu kormit" class="pnaz">сайт sk</p>
+    
+    <form id="regForm" class="pod">
+  <h2 class="za">Заявка на Ивент</h2>
+  <h4 class="zaa">занято мест: <span id="slotsCount">0</span> из 9</h4>
+  <input type="text" id="playerNick" placeholder="Введите ваш ник на сервере" class="nil" required>
+  <button type="submit" class="tt">Подать Заявку</button>
+</form>
+
+    
+    <a href="Pooker.zip" download="document.pdf" class="kno">Скачать Ресурспак (.zip)</a>
+    
+        <div class="yyy">
+      <h2 class="tex">Иноформация о Ивенте</h2>
+      <p class="tyyy">Статус: <span class="van" id="statusText">Набор открыт</span></p>
+      <p class="ty">Дата: <span class="fri">19 июля</span></p>
+      <p class="ty">Время: <span class="fri">18:00 МСК</span></p>
+      <p class="ty">Вид: <span class="fri">Техасский Холдем</span></p>
+    </div>
+<div class="pod" style="margin-top: 10px; margin-bottom: 20px; height: auto; min-height: fit-content; overflow: hidden; padding-bottom: 20px;">
+      <h2 class="za">Принятые Участники</h2>
+      <div id="approvedPlayersList" style="text-align: left; margin: 15px auto; max-width: 80%; font-family: sans-serif; font-size: 16px; color: #e0e0e0; line-height: 1.8;">
+        Загрузка списка...
+      </div>
+    </div>
+
+
+    
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    
+    <script src="app.js"></script>
+  </body>
+</html>

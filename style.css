@@ -1,0 +1,145 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background-color: #1A1F16
+}
+.naz {
+  text-align: center;
+  color: #edc375;
+  margin-top: 2%
+}
+.pnaz {
+  text-align: center;
+  color: #795411;
+  font-weight: 1000;
+}
+.pod {
+  background-color: #2C3E2B;
+  height: 32vh;
+  width: 90%;
+  margin: 0% 3%;
+  margin-top: 1%;
+  border: 1vh solid #7A2B2D;
+  border-radius: 2vh;
+  padding-bottom: 0px;
+}
+.za {
+  color: #E5A93B;
+  text-align: center;
+  padding-top: 1vh;
+}
+.zaa {
+  color: #795411;
+  text-align: center;
+  padding-top: 1vh
+}
+.nil {
+    width: 90%;
+    height: 28%;
+    margin: 1vh 5%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 1vh;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 2vh;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.nil::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.nil:focus {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.tt {
+  display: block;
+  background-color: #832e31;
+  border: none;
+  width: 80%;
+  height: 21%;
+  border-radius: 1vh;
+  margin: 0% 10%;
+  color: #c7c7c7ff;
+  border: 0.7vh solid #7A2B2D;
+  font-weight: 1000;
+}
+.tt:active {
+  background-color: #7A2B2D;
+  color: #818181
+}
+.pod {
+    max-width: 500px;
+    margin: 1vh auto;
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.yyy {
+  background-color: #2C3E2B;
+  height: 24vh;
+  width: 90%;
+  margin: 0% 3%;
+  margin-top: 1%;
+  border: 1vh solid #7A2B2D;
+  border-radius: 2vh;
+  padding-bottom: 0px;
+      max-width: 500px;
+    margin: 1vh auto;
+    width: 90%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.kno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: #832e31;
+    height: 6vh;
+    width: 90%;
+    max-width: 500px;
+    margin: 1vh auto;
+    border-radius: 1vh;
+    border: 0.7vh solid #7A2B2D;
+    
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+    -webkit-tap-highlight-color: transparent;
+    color: #c7c7c7;
+    box-sizing: border-box;
+    font-weight: 1000;
+}
+.kno:active {
+  background-color: #7A2B2D;
+  color: #818181;
+}
+.tex {
+  text-align: center;
+  color: #E5A93B
+}
+.ty {
+  color: #fff;
+  font-weight: 1000;
+  text-align: center;
+  padding: 0.3vh 0vh
+}
+.tyyy {
+  color: #fff;
+  font-weight: 1000;
+  text-align: center;
+  padding: 0.3vh 0vh;
+  padding-top: 1.5vh
+}
+.fri {
+  color: #cecece
+}
+.van {
+  color: #00d100
+}
