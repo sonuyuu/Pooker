@@ -58,9 +58,10 @@
       toast.id = 'main-toast';
       toast.textContent = message;
       
-      // Позиционируем строго сверху через JS, чтобы обойти кэш CSS на телефонах
+      // Полный сброс позиционирования, чтобы перебить старый кэш в CSS
       toast.style.position = 'fixed';
       toast.style.top = '20px';
+      toast.style.bottom = 'auto'; 
       toast.style.left = '50%';
       toast.style.transform = 'translateX(-50%)';
       toast.style.padding = '12px 24px';
@@ -70,10 +71,16 @@
       toast.style.fontWeight = 'bold';
       toast.style.boxShadow = '0 4px 15px rgba(0,0,0,0.6)';
       toast.style.textAlign = 'center';
+      
+      // Жестко фиксируем высоту, чтобы плашка не растягивалась
       toast.style.width = 'auto';
+      toast.style.height = 'auto';
+      toast.style.minHeight = 'unset';
+      toast.style.maxHeight = 'unset';
+      toast.style.display = 'block';
       toast.style.whiteSpace = 'nowrap';
       
-      // Настройка фонового цвета без обводок (border: none)
+      // Цвета без рамок и обводок
       toast.style.backgroundColor = isError ? '#7A2B2D' : '#2C3E2B';
       toast.style.color = isError ? '#ff8888' : '#00d100';
       toast.style.border = 'none'; 
